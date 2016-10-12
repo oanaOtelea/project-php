@@ -1,0 +1,45 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+	<title>My first website</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="myfirstwebsite.css">
+	<link href="media-queries.css" rel="stylesheet" type="text/css">
+	<script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+	<script type="text/javascript" src="handlebars-v1.3.0.js"></script>
+</head>
+<body>
+	<header>
+		<img src="images/1412127997_1.png" alt="image">
+		<p>mobile entertainment</p>
+		<a href="logout.php" id="registerButton">Logout</a>
+		<div id="smallVerticalLine"></div>
+		<a id="loggedAs">Logged in as <?php echo $_SESSION['email'] ?></a>
+		<a href="account.php" id="loggedProfile"><?php echo $_SESSION['email'] ?>'s Profile</a>
+		
+	</header>
+	<div class="menu">
+		<ul>
+			<li>Home</li>
+			<li>About</li>
+			<li>Entertainment</li>
+			<li>Gallery</li>
+			<li>Contacts</li>
+		</ul>
+		<input type="text" placeholder="Search" />
+	</div>
+	<div class="container">
+	<ul>
+	<?php 
+	foreach ($conversation as $message) {
+		if ($message->user_id_send == $_SESSION['id']) {
+			echo "<div id='sentMsg'>" . $message->body . " - " . $message->sentTime . "</div>";
+			echo "<div id='arrow-down-sent'></div>";
+		} elseif ($message->user_id_send == $_GET['id']) {
+			echo "<div id='receivedMsg'>" . $message->body . " - " . $message->sentTime . "</div>";
+			echo "<div id='arrow-down-received'></div>";
+		}
+	}
+	?>
+	</ul>
+	</div>

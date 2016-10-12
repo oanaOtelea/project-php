@@ -1,0 +1,94 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+	<title>My first website</title>
+	<meta http-equiv="Content-Type" content="text/html">
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="myfirstwebsite.css">
+	<script type="text/javascript" src="jquery-2.1.1.js"></script>
+</head>
+<body>
+	<header>
+		<img src="images/1412127997_1.png" alt="image">
+		<p>mobile entertainment</p>
+		<a href="register.php" id="registerButton">Register</a>
+		<div id="smallVerticalLine"></div>
+		<a href="login.php" id="loginButton">Login</a>
+	</header>
+	<div class="menu">
+		<ul>
+			<li><a href="myfirstwebsite.php">Home</a></li>
+			<li>About</li>
+			<li>Entertainment</li>
+			<li>Gallery</li>
+			<li>Contacts</li>
+		</ul>
+		<input type="text" placeholder="Search" />
+	</div>
+	<div class="container">
+		<h1>Login to your account</h1>
+		<h2></h2>
+		<form action="login.php" method="post">
+			<ul>
+				<li>
+					<label for="email"><p>*</p><h4>Email</h4> </label>
+					<input id="inputNameLogedIn" type="text" name="email" value="" />
+				</li>
+				<li>
+					<label for="password"><p>*</p><h4>Password</h4> </label>
+		 			<input id="inputEmailLogedIn" type="password" name="password" value="" />
+		 		</li>
+		 		<li> 
+		 			<input type="submit" name="submit" value="Login" id="registeredButton">
+		 		</li>
+		 	</ul>
+		</form>
+		
+	</div>
+	<div class="contactUs">
+		<img src="images/1412128005_4.png" alt="image">
+		<h1>mobile entertainment</h1>
+		<p>+1 800 603 6035</p>
+	</div>
+	<div class="bottom">
+		<ul>
+			<li>Home</li>
+			<li>About</li>
+			<li>Entertainment</li>
+			<li>Gallery</li>
+			<li>Contacts</li>
+		</ul>
+		<p>Copyright@2014|Privacy Policy</p>
+	</div>
+</body>
+</html>
+<script>
+
+$(document).ready(function() {
+
+	$('#registeredButton').on('click', function(e) {
+		e.preventDefault();
+		var emailVar = $('#inputNameLogedIn').val();
+		var passwordVar = $('#inputEmailLogedIn').val();
+
+		$.ajax({
+			dataType: "json",
+			type: "POST",
+			url: "login.php",
+			data: {email: emailVar, password: passwordVar},
+			success: function (data, textStatus, jqXHR) {
+				if (data.success) {
+					window.location.href = "http://localhost/sandbox/NEW/first.php";
+				} else {
+					console.log(data, data.success);
+				}
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+				console.log( errorThrown );
+			}
+			
+		});
+	});
+});
+
+</script>

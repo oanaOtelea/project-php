@@ -1,0 +1,33 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+	<title>My first website</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="myfirstwebsite.css">
+	<script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+	
+	
+</head>
+<body>
+	<header>
+		<img src="images/1412127997_1.png" alt="image">
+		<p>mobile entertainment</p>
+		<a href="register.php" id="registerButton">Register</a>
+		<div id="smallVerticalLine"></div>
+		<a href="login.html" id="loginButton">Login</a>
+	
+	</header>
+	<div class="menu">
+		<ul>
+			<li>Home</li>
+			<li>About</li>
+			<li>Entertainment</li>
+			<li>Gallery</li>
+			<li>Contacts</li>
+		</ul>
+		<form method="post" action="search.php">
+			<input type="text" name="name" placeholder="Search" />
+			<input id="buttonSearch" name="submit" type="image" src="images/search-iconhh.png" value="search" />
+			<input type="hidden" name="searchForm" value="true" />
+		</form>
+	</div>

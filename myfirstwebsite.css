@@ -1,0 +1,678 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+header {
+	width: 1000px;
+	height: 128px;
+	margin: auto;
+}
+header img {
+	float: left;
+}
+header p {
+	font-style: italic;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: x-large;
+	float: left;
+	padding: 50px;
+}
+#loginButton {
+	float: right;
+	margin-top: 50px;
+	background-color: #fff;
+	border: none;
+	font-size: large;
+	padding: 0;
+	text-decoration: none;
+	color: #55C2DB;
+}
+#loggedAs {
+	border: none;
+	font-size: large;
+	padding: 0;
+	text-decoration: none;
+	color: #55C2DB;
+	float: right;
+	margin-top: 50px;
+}
+#loggedProfile {
+	border: none;
+	font-size: large;
+	padding: 0;
+	text-decoration: none;
+	color: #55C2DB;
+	float: right;
+	margin-top: 73px;
+	margin-right: -262px;
+}
+#registerButton {
+	float: right;
+	margin-top: 50px;
+	background-color: #fff;
+	border: none;
+	font-size: large;
+	padding: 0;
+	text-decoration: none;
+	color: #55C2DB;
+}
+#loginButton:hover {
+	cursor: pointer;
+	color: #000;
+}
+#registerButton:hover {
+	cursor: pointer;
+	color: #000;
+}
+#buttonSendMessages {
+	float: right;
+	margin-right: -250px;
+	margin-top: -40px;
+	color: #fff;
+	border: solid 1px #000;
+	background-color: #1E1E1E;
+	padding: 9px;
+}
+#buttonSendMessages:hover {
+	cursor: pointer;
+	background-color: #000;
+}
+#buttonArchiveMessages {
+	float: right;
+	margin-right: -100px;
+	margin-top: -40px;
+	color: #fff;
+	border: solid 1px #000;
+	background-color: #1E1E1E;
+	padding: 9px 25px 9px 25px;
+}
+#buttonArchiveMessages:hover {
+	cursor: pointer;
+	background-color: #000;
+}
+#title {
+	width: 280px;
+	margin-right: 100px;
+	margin-bottom: 25px;
+	margin-left: 10px;
+}
+#body {
+	width: 280px;
+	height: 280px;
+	resize: none;
+	margin-right: 170px;
+	margin-bottom: 25px;
+	margin-left: 10px;
+}
+#buttonSend {
+	padding: 10px 30px 10px 30px;
+	background-color: #1E1E1E;
+	border: #000;
+	color: #fff;
+	margin-bottom: 70px;
+	margin-left: 10px;
+}
+#buttonSend:hover {
+	cursor: pointer;
+	background-color: #000;
+}
+#smallVerticalLine {
+	width: 1px;
+	height: 20px;
+	background-color: #000;
+	float: right;
+	margin-top: 50px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.menu {
+	width: 1000px;
+	margin: auto;
+	background-color: #1E1E1E;
+	height: 50px;
+	color: #fff;
+}
+.menu input {
+	float: right;
+	border: none;
+	margin-top: 15px;
+	padding: 2px;
+	margin-right: 17px;
+}
+.menu li {
+	float: left;
+	padding: 17px;
+}
+.menu li:nth-child(1):hover {
+	cursor: pointer;
+	background: -webkit-linear-gradient(#4F4A4A, #211A1A);
+  	background: -o-linear-gradient(#4F4A4A, #211A1A); 
+  	background: -moz-linear-gradient(#4F4A4A, #211A1A); 
+  	background: linear-gradient(#4F4A4A, #211A1A);
+}
+.menu li:nth-child(2):hover {
+	cursor: pointer;
+	background: -webkit-linear-gradient(#4F4A4A, #211A1A);
+  	background: -o-linear-gradient(#4F4A4A, #211A1A); 
+  	background: -moz-linear-gradient(#4F4A4A, #211A1A); 
+  	background: linear-gradient(#4F4A4A, #211A1A);
+}
+.menu li:nth-child(3):hover {
+	cursor: pointer;
+	background: -webkit-linear-gradient(#4F4A4A, #211A1A);
+  	background: -o-linear-gradient(#4F4A4A, #211A1A); 
+  	background: -moz-linear-gradient(#4F4A4A, #211A1A); 
+  	background: linear-gradient(#4F4A4A, #211A1A);
+}
+.menu li:nth-child(4):hover {
+	cursor: pointer;
+	background: -webkit-linear-gradient(#4F4A4A, #211A1A);
+  	background: -o-linear-gradient(#4F4A4A, #211A1A); 
+  	background: -moz-linear-gradient(#4F4A4A, #211A1A); 
+  	background: linear-gradient(#4F4A4A, #211A1A);
+}
+.menu li:nth-child(5):hover {
+	cursor: pointer;
+	background: -webkit-linear-gradient(#4F4A4A, #211A1A);
+  	background: -o-linear-gradient(#4F4A4A, #211A1A); 
+  	background: -moz-linear-gradient(#4F4A4A, #211A1A); 
+  	background: linear-gradient(#4F4A4A, #211A1A);
+}
+.headerSlider {
+	width: 1000px;
+	height: 350px;
+	margin: auto;
+}
+.headerSlider ul {
+	width: 10000px;
+	position: relative;
+}
+.headerSlider li {
+	float: left;
+}
+#oneRoundButton {
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: #1E1E1E;
+	position: absolute;
+	margin-left: 485px;
+	margin-top: 325px;
+}
+#twoRoundButton {
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: #1E1E1E;
+	position: absolute;
+	margin-left: 500px;
+	margin-top: 325px;
+}
+#threeRoundButton {
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: #1E1E1E;
+	position: absolute;
+	margin-left: 515px;
+	margin-top: 325px;
+}
+.aboutUs {
+	width: 1000px;
+	height: 330px;
+	margin: auto;
+	margin-top: 30px;
+}
+.firstParagraph {
+	width: 200px;
+	height: 300px;
+	float: left;
+}
+.secondParagraph {
+	width: 200px;
+	height: 300px;
+	float: left;
+	margin-left: 200px;
+	margin-right: 200px;
+
+}
+.thirdParagraph {
+	width: 200px;
+	height: 300px;
+	float: right;
+}
+#doubleLine {
+	width: 200px;
+	height: 2px;
+	border-top: solid 1px #E3E3E3;
+	border-bottom: solid 1px #E3E3E3;
+	border-left: none;
+	border-right: none;
+	background-color: #fff;
+	margin-top: 10px;
+	margin-bottom: 8px;
+}
+.aboutUs h1 {
+	font-family: cursive;
+	font-size: larger;
+}
+.aboutUs p {
+	font-size: smaller;
+	margin-top: 5px;
+	color: #8F8F8F;
+}
+.aboutUs h2 {
+	color: #57C9D6;
+	margin-top: 10px;
+	font-size: smaller;
+	float: left;
+}
+.link {
+	height: 30px;
+}
+#arrow {
+	float: left;
+	margin-top: 12px;
+	margin-left: 10px;
+}
+#imageOneSlider {
+	background-image: url('images/people-talking.jpg');
+	float: left;
+	height: 300px;
+	width: 1000px;
+}
+#imageTwoSlider {
+	background-image: url('images/Support-group.jpg');
+	float: left;
+	height: 300px;
+	width: 1000px;
+}
+#imageThreeSlider {
+	background-image: url('images/talking-in-group-14951.jpg');
+	float: left;
+	height: 300px;
+	width: 1000px;
+}
+.bottomSlider {
+	width: 1000px;
+	height: 300px;
+	margin: auto;
+	margin-bottom: 40px;
+}
+.overlay {
+	width: 1000px;
+	height: 300px;
+	z-index: 1;
+	opacity: 0.1;
+	background-color: #000;
+	position: absolute;
+	top: 888px;
+	left: 175px;
+}
+#verticalLine {
+	background-color: #DBDCDD;
+	width: 3px;
+	height: 100px;
+	border: 1px solid #888889;
+	float: left;
+	opacity: 0.7;
+	margin-left: 330px;
+	margin-top: -100px
+}
+.containerForWriting {
+	width: 400px;
+	height: 50px;
+	float: right;
+	color: #000;
+	margin-right: 235px;
+	margin-top: -90px;
+}
+.containerForWriting h3 {
+	margin-top: 10px;
+	font-size: x-large;
+}
+#roundDiv {
+	width: 100px;
+	height: 100px;
+	border-radius: 54px;
+	background-color: #fff;
+	opacity: 0.7;
+	margin-top: 98px;
+	margin-left: 200px;
+}
+.bottomSlider img {
+	padding: 12px;
+}
+#oneRoundButtonBottom {
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: #000;
+}
+
+
+
+
+
+
+
+.contactUs {
+	width: 1000px;
+	height: 185px;
+	background-color: #1E1E1E;
+	margin: auto;
+}
+.contactUs h1 {
+	font-style: italic;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: x-large;
+	float: left;
+	padding: 30px;
+	margin-top: 65px;
+	color: #fff;
+	margin-left: 20px;
+}
+.contactUs p {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: x-large;
+	float: right;
+	padding: 30px;
+	color: #55C2DB;
+	margin-top: 65px;
+}
+.contactUs img {
+	float: left;
+	margin-top: 35px;
+}
+.bottom {
+	width: 1000px;
+	height: 140px;
+	background-color: #55C2DB;
+	margin: auto;
+}
+.bottom li {
+	display: inline-block;
+	margin-left: 65px;
+	margin-top: 50px;
+}
+.bottom li:first-child {
+	margin-left: 235px;
+}
+.bottom p {
+	text-align: center;
+	margin-top: 20px;
+	color: #fff;
+}
+.bottom li:nth-child(1):hover {
+	cursor: pointer;
+	color: #fff;
+}
+.bottom li:nth-child(2):hover {
+	cursor: pointer;
+	color: #fff;
+}
+.bottom li:nth-child(3):hover {
+	cursor: pointer;
+	color: #fff;
+}
+.bottom li:nth-child(4):hover {
+	cursor: pointer;
+	color: #fff;
+}
+.bottom li:nth-child(5):hover {
+	cursor: pointer;
+	color: #fff;
+}
+/* Login Page */
+
+.container {
+	width: 500px;
+	margin: auto;
+}
+.container h1 {
+	font-family: cursive;
+	font-size: x-large; 
+	margin-top: 60px;
+	margin-bottom: 30px;
+	margin-left: 8px;
+}
+.container h2 {
+	margin-left: 8px;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:hover {
+	cursor: pointer;
+}
+.container form {
+	margin-top: 30px;
+}
+
+#inputNameLogedIn {
+	width: 300px;
+	height: 30px;
+	margin-left: 10px;
+	margin-right: 50px;
+	margin-bottom: 20px;
+}
+#inputEmailLogedIn {
+	width: 300px;
+	height: 30px;
+	margin-left: 10px;
+	margin-right: 85px;
+}
+.container button {
+	margin-top: 40px;
+	margin-left: 12px;
+	padding: 10px 30px 10px 30px;
+	background-color: #1E1E1E;
+	border: #000;
+	color: #fff;
+	margin-bottom: 70px;
+}
+.container button:hover {
+	cursor: pointer;
+	background-color: #000;
+}
+/* Register Page */
+
+.container h3 {
+	color: #FF6C00;
+	margin-top: 15px;
+	font-size: small;
+	margin-left: 8px;
+}
+form p {
+	color: #FF6C00;
+	text-decoration: none;
+	margin-top: 10px;
+}
+h4 {
+	margin-bottom: 10px;
+	margin-top: -15px;
+	margin-left: 10px;
+}
+h5 {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+#notMandatory {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.input {
+	margin-left: 10px;
+	width: 300px;
+	height: 30px;
+}
+#agreeStar {
+	margin-bottom: 10px;
+	margin-top: -18px;
+	margin-left: 30px;
+}
+#agreeText {
+	margin-bottom: 10px;
+	margin-top: -25px;
+	margin-left: 40px;
+}
+#inputAgree {
+	margin-top: 12px;
+	margin-left: -183px;
+}
+#inputSexM {
+	float: left;
+	margin-left: 55px;
+	margin-top: -24px;
+}
+#inputSexF {
+	float: left;
+	margin-left: 22px;
+	margin-top: -24px;
+}
+#radioTextM {
+	float: left;
+	margin-left: 75px;
+	margin-top: -25px;
+}
+#radioTextF {
+	float: left;
+	margin-left: 40px;
+	margin-top: -25px;
+}
+#inputBDay {
+	width: 150px;
+	margin-left: 10px;
+	height: 30px;
+}
+#dateExample {
+	float: right;
+	margin-right: 188px;
+}
+#buttonSearch {
+	margin-right: -184px;
+	margin-top: 5px;
+	padding: 0;
+}
+::-webkit-input-placeholder {
+   font-size: 15px;
+   font-variant: small-caps;
+}
+
+:-moz-placeholder { 
+   font-size: 15px;
+   font-variant: small-caps;
+}
+
+::-moz-placeholder {  
+   font-size: 15px; 
+   font-variant: small-caps;
+}
+
+:-ms-input-placeholder {  
+   font-size: 15px; 
+   font-variant: small-caps;
+}
+#registeredButton {
+	margin-top: 40px;
+	margin-left: 12px;
+	padding: 10px 30px 10px 30px;
+	background-color: #1E1E1E;
+	border: #000;
+	color: #fff;
+	margin-bottom: 70px;
+}
+#registeredButton:hover {
+	cursor: pointer;
+	background-color: #000;
+}
+.notice {
+	color: red;
+	font-style: italic;
+}
+#sentMsg {
+	padding: 15px;
+	color: #000;
+	background: #f3961c;
+	border-radius: 10px;
+	margin-top: 30px;
+	word-wrap: break-word;
+	width: 250px;
+	margin-left: 220px;
+	height: auto;
+}
+#receivedMsg {
+	padding: 15px;
+	color: #fff;
+	background: #075698;
+	border-radius: 10px;
+	margin-top: 30px;
+	word-wrap: break-word;
+	width: 250px;
+	margin-right: 220px;
+	height: auto;
+}
+#arrow-down-sent {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 50px solid #f3961c;
+	float: right;
+	margin-right: -50px;
+	margin-top: -32px;
+}
+#arrow-down-received {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 50px solid #075698;
+	float: left;
+	margin-left: -50px;
+	margin-top: -32px;
+}
+

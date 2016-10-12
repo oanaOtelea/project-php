@@ -1,0 +1,39 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+	<title>My first website</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="myfirstwebsite.css">	
+</head>
+<body>
+	<header>
+		<img src="images/1412127997_1.png" alt="image">
+		<p>mobile entertainment</p>
+		<a href="logout.php" id="registerButton">Logout</a>
+		<div id="smallVerticalLine"></div>
+		<a id="loggedAs">Logged in as <?php echo $_SESSION['email'] ?></a>
+		<a href="account.php" id="loggedProfile"><?php echo $_SESSION['email'] ?>'s Profile</a>
+		
+	</header>
+	<div class="menu">
+		<ul>
+			<li><a href="first.php">Home</a></li>
+			<li>About</li>
+			<li>Entertainment</li>
+			<li>Gallery</li>
+			<li>Contacts</li>
+		</ul>
+		<form method="post" action="search.php">
+			<input type="text" name="name" placeholder="Search" />
+			<input id="buttonSearch" name="submit" type="image" src="images/search-iconhh.png" value="search" />
+			<input type="hidden" name="searchForm" value="true" />
+		</form>
+	</div>
+	<div class="container">
+	<?php 
+	foreach ($allMessages as $allMessage) {
+		echo "<li><a href='conversation.php?id=" . $allMessage->id ."'>my conversation with " . $allMessage->name . "</a></li>";
+	}
+	?>
+	
+	</div>

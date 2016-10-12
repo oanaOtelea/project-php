@@ -1,0 +1,87 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+	<title>My first website</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="myfirstwebsite.css">
+</head>
+<body>
+	<header>
+		<img src="images/1412127997_1.png" alt="image">
+		<p>mobile entertainment</p>
+		<a href="register.php" id="registerButton">Register</a>
+		<div id="smallVerticalLine"></div>
+		<a href="login.php" id="loginButton">Login</a>
+	</header>
+	<div class="menu">
+		<ul>
+			<li><a href="second.php">Home</a></li>
+			<li>About</li>
+			<li>Entertainment</li>
+			<li>Gallery</li>
+			<li>Contacts</li>
+		</ul>
+		<input type="text" placeholder="Search" />
+	</div>
+	<div class="container">
+		<h1>Registration</h1>
+		<h2><a>Login here</a> if you are already registered.</h2>
+		<h3>All fields marked by asterisk (*) are mandatory</h3>
+		<form action="register.php" method="post">
+			<?php if ( isset($status) ) : ?>
+			<p class="notice"><?php echo $status; ?></p>
+			<?php endif; ?>
+			<ul>
+				<li>
+					<label for="email"><p>*</p><h4>Email</h4> </label>
+					<input class="input" type="text" name="email" value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>">
+				</li>
+				<li>
+					<label for="password"><p>*</p><h4>Password</h4> </label>
+		 			<input class="input" type="password" name="password" value="<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>">
+		 		</li>
+		 			<li>
+		 			<label for="confirm_password"><p>*</p><h4>Confirm password</h4> </label>
+		 			<input class="input" type="password" name="confirm_password" value="<?php echo isset($_POST['confirm_password']) ? $_POST['confirm_password'] : ''; ?>">
+		 		</li>
+		 		<li>
+		 			<label for="name"><h4 id="notMandatory">Name</h4> </label>
+		 			<input class="input" type="text" name="name" value="<?php echo isset($_POST['name']) ? $_POST['name'] : ''; ?>">
+		 		</li>
+		 		<li>
+		 			<label for="bdaytime"><h4 id="notMandatory">Birthday Date</h4> </label>
+		 			<input id="inputBDay" placeholder="dd/mm/yyyy" type="date" name="bdaytime" value="<?php echo isset($_POST['bdaytime']) ? $_POST['bdaytime'] : ''; ?>">
+		 		</li>
+		 		<li>
+		 			<label for="sex"><p>*</p><h4>Sex</h4> </label>
+		 			<li><input id="inputSexM" type='radio' name='sex' value="<?php echo isset($_POST['sex']) ? $_POST['sex']="male" : ''; ?>" checked><h4 id="radioTextM">Male</h4><input type='radio' id="inputSexF" name='sex' value="<?php echo isset($_POST['sex']) ? $_POST['sex']="female" : ''; ?>"><h4 id="radioTextF">Female</h4></li>
+
+		 		</li>
+		 		<li>
+		 			<input id="inputAgree" type='checkbox' name='agree' value="yes" >
+		 			<label for="agree"><p id="agreeStar">*</p><h4 id="agreeText">I agree to terms and conditions</h4> </label>
+		 		</li>
+		 		<li> 
+		 			<input type="submit" value="Register" id="registeredButton">
+		 		</li>
+		 		<input type="hidden" name="userForm" value="true" />
+		 	</ul>
+		</form>
+	</div>
+	<div class="contactUs">
+		<img src="images/1412128005_4.png" alt="image">
+		<h1>mobile entertainment</h1>
+		<p>+1 800 603 6035</p>
+	</div>
+	<div class="bottom">
+		<ul>
+			<li>Home</li>
+			<li>About</li>
+			<li>Entertainment</li>
+			<li>Gallery</li>
+			<li>Contacts</li>
+		</ul>
+		<p>Copyright@2014|Privacy Policy</p>
+	</div>
+</body>
+</html>

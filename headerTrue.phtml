@@ -1,0 +1,31 @@
+<?php session_start() ?>
+<!DOCTYPE hmtl>
+<html>
+<head>
+	<title>My first website</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="myfirstwebsite.css">
+	<script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+	
+	
+</head>
+<body>
+	<header>
+		<img src="images/1412127997_1.png" alt="image">
+		<p>mobile entertainment</p>
+		<a href="logout.php" id="registerButton">Logout</a>
+		<div id="smallVerticalLine"></div>
+		<a id="loggedAs">Logged in as <?php echo $_SESSION['email'] ?></a>
+		<a href="account.php" id="loggedProfile"><?php echo $_SESSION['email'] ?>'s Profile</a>
+		
+	</header>
+	<div class="menu">
+		<ul>
+			<li>Home</li>
+			<li>About</li>
+			<li>Entertainment</li>
+			<li>Gallery</li>
+			<li>Contacts</li>
+		</ul>
+		<input type="text" placeholder="Search" />
+	</div>
